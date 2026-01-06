@@ -71,10 +71,12 @@ why stateful firewalls are preferred in real enterprise environments.
 
 
 
-\## Network Topology
+
+## Network Topology
 
 
 
 !\[Network Topology](diagrams/network-topology.png)
+
 
 
