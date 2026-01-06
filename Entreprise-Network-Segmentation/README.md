@@ -72,13 +72,4 @@ why stateful firewalls are preferred in real enterprise environments.
 
 
 
-## Network Topology
-
-
-
-!\[Network Topology](https://github.com/eslam2cyber/Entreprise-Network-Segmentation/blob/main/Entreprise-Network-Segmentation/diagrams/network-topology.png?raw=true)
-
-
-
-
 
