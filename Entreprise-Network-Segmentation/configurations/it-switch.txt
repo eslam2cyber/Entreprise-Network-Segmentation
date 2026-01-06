@@ -1,0 +1,19 @@
+! IT ACCESS SWITCH
+
+hostname IT-SW
+
+vlan 40
+ name IT
+vlan 99
+ name NATIVE
+
+! Access ports for IT PCs
+interface range fa0/2 - 3
+ switchport mode access
+ switchport access vlan 40
+
+! Trunk to Core
+interface fa0/1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 40,99

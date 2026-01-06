@@ -1,0 +1,29 @@
+! CORE SWITCH CONFIGURATION
+
+hostname CORE-SW
+
+! VLANs
+vlan 10
+ name ADMIN
+vlan 20
+ name HR
+vlan 30
+ name FIN
+vlan 40
+ name IT
+vlan 50
+ name SERVER
+vlan 99
+ name NATIVE
+
+! Trunk ports to access switches
+interface range fa0/2 - 5
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,40,50,99
+
+! Trunk to Router
+interface fa0/1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,40,50,99

@@ -1,0 +1,19 @@
+! FINANCE ACCESS SWITCH
+
+hostname FIN-SW
+
+vlan 30
+ name FIN
+vlan 99
+ name NATIVE
+
+! Access ports for Finance PCs
+interface range fa0/2 - 3
+ switchport mode access
+ switchport access vlan 30
+
+! Trunk to Core
+interface fa0/1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 30,99

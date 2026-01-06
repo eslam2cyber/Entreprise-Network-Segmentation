@@ -1,0 +1,19 @@
+! ADMIN ACCESS SWITCH
+
+hostname ADMIN-SW
+
+vlan 10
+ name ADMIN
+vlan 99
+ name NATIVE
+
+! Access ports for Admin PCs
+interface range fa0/2 - 3
+ switchport mode access
+ switchport access vlan 10
+
+! Trunk to Core
+interface fa0/1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,99
